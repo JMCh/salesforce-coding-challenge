@@ -1,0 +1,10 @@
+I have considered two possible options for this requirement:
+
+1:Make call to NPS service by making call out from apex which is being invoked from flow.
+2:Make call to NPS Service from a batchable apex class condidering batch size of 30.
+
+
+Limitations-Possible problems:
+
+1:Considering NPS service can accept 30 order ids in one request(Approach 2 should be used),in this case, Flow should be bulkified also callout limit(100) and heap size issues should be handled .
+2:Error handling within flow should be considered.
